@@ -74,3 +74,6 @@ gem 'bootstrap'
 
 # rails_autolinkの導入
 gem 'rails_autolink'
+
+# 検索機能の導入
+gem 'ransack'
