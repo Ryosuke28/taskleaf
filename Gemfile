@@ -77,3 +77,9 @@ gem 'rails_autolink'
 
 # 検索機能の導入
 gem 'ransack'
+
+# ページネーションの導入
+gem 'kaminari'
+
+# 非同期処理ツールの導入
+gem 'sidekiq'
