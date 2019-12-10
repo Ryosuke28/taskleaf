@@ -50,6 +50,7 @@ class TasksController < ApplicationController
   
   def destroy
     @task.destroy
+    redirect_to tasks_url, notice: "タスクを削除しました"
   end
   
   def import
