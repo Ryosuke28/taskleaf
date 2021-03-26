@@ -8,3 +8,4 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /taskleaf
 COPY Gemfile Gemfile.lock /taskleaf/
 RUN bundle install
+RUN bundle update
