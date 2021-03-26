@@ -9,12 +9,12 @@ before_install:
   - docker-compose up --build -d
   - docker login -u "$HEROKU_USERNAME" -p "$HEROKU_API_KEY" registry.heroku.com
 
-# DBを作成し、テスト実行(RSpecは実行していない)
+# DBを作成し、テスト実行
 script:
   - docker-compose exec --env 'RAILS_ENV=test' web rails db:create
   - docker-compose exec --env 'RAILS_ENV=test' web rails db:migrate
-  - docker-compose exec --env 'RAILS_ENV=test' web rails test
-  # - docker-compose exec --env 'RAILS_ENV=test' web bundle exec rspec spec
+  # - docker-compose exec --env 'RAILS_ENV=test' web rails test
+  - docker-compose exec --env 'RAILS_ENV=test' web bundle exec rspec spec
 
 # デプロイの設定
 deploy:
